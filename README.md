@@ -13,7 +13,6 @@ This project is a simple yet effective **Reminder App** built with **Node.js**, 
 - 📅 **Create Reminders**: Set a date, time, message, and message type (SMS or Email).
 - ✅ **Mark as Complete**: Update reminders to show their status as completed.
 - 🧾 **Get All Reminders** *(optional if you include it)*: Retrieve all saved reminders.
-- 🔁 **Recurring Reminder Support** *(optional bonus)*: Auto-repeat reminders on a schedule *(if added)*.
 
 ---
 
@@ -21,8 +20,9 @@ This project is a simple yet effective **Reminder App** built with **Node.js**, 
 
 - **Node.js**
 - **Express**
-- **MongoDB with Mongoose**
-- **Postman (for API testing)**
+- **MongoDB** (with **Mongoose**)
+- **Postman** (for API testing)
+- **Nodemon** (for auto-refresh during development)
 
 ---
 
@@ -37,7 +37,13 @@ cd remindlater
 npm install
 
 # Create a .env file and add your MongoDB URI
+# Example:
 echo "MONGODB_URL=mongodb+srv://<your-connection-string>" > .env
 
 # Start the server
+# For development (with auto-restart)
+npm run dev
+
+# Or to start normally
 node src/server.js
+
